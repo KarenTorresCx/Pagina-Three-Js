@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Guini Style JS</title>
+  <link rel="icon" type="image/png" href="./Imagenes/logo.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css" />
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.149.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.149.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="./js/main.js"></script>
+</head>
+
+<body>
+  <!-- Nav ARRIBA-->
+  <nav class="navbar navbar-expand-lg">
+    <div class="navbar-left">
+      <button class="btn-orden1">
+        <a href="#" class="social-link" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </button>
+    </div>
+    <div class="navbar-center">
+      <img src="./Imagenes/logo.png" width="40" height="40" alt="Logo" />
+      Guini Style
+    </div>
+    <div class="navbar-right">
+      <button class="btn-orden">Ordena ya</button>
+    </div>
+  </nav>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div id="canvas-container"></div>
+    <h1 class="titulo">NUEVA COLECCIÓN</h1>
+    <button class="btn-explora">Explorar más</button>
+  </section>
+
+  <!-- Carrusel -->
+  <div id="carouselExampleIndicators" class="carousel slide mb-5" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./Imagenes/c1.webp" class="d-block w-100" alt="TEMERARIO">
+      </div>
+      <div class="carousel-item">
+        <img src="./Imagenes/c2.webp" class="d-block w-100" alt="HURACAN">
+      </div>
+      <div class="carousel-item">
+        <img src="./Imagenes/c3.webp" class="d-block w-100" alt="SELL">
+      </div>
+      <div class="carousel-item">
+        <img src="./Imagenes/c4.webp" class="d-block w-100" alt="URUS">
+      </div>
+      <div class="carousel-item">
+        <img src="./Imagenes/c5.webp" class="d-block w-100" alt="REVUELTO">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!--Cards-->
+
+  <section class="container mb-5" id="Cards">
+    <h2 class="text-center mb-4 text-light">CONOCE NUESTROS MODELOS</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4">
+
+      <div class="col">
+        <div class="card h-100 bg-dark text-light">
+          <div class="card-img-top" style="height: 200px;" id="model-container-1"></div>
+          <div class="card-body">
+            <h5 class="card-title">Lamborghini FKP 37</h5>
+            <p class="card-text">Un superdeportivo híbrido que fusiona diseño extremo con tecnología eléctrica de punta.</p>
+            <button class="btn btn-outline-light w-100 mt-2">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 bg-dark text-light">
+          <div class="card-img-top" style="height: 200px;" id="model-container-2"></div>
+          <div class="card-body">
+            <h5 class="card-title">Lamborghini Invencible</h5>
+            <p class="card-text">Exclusividad y agresividad en un modelo único que rinde homenaje al V12 clásico.</p>
+            <button class="btn btn-outline-light w-100 mt-2">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 bg-dark text-light">
+          <div class="card-img-top" style="height: 200px;" id="model-container-3"></div>
+          <div class="card-body">
+            <h5 class="card-title">Lamborghini Murciélago</h5>
+            <p class="card-text">Diseño emblemático de los 2000 con un motor V12 que marcó una era en la marca.</p>
+            <button class="btn btn-outline-light w-100 mt-2">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 bg-dark text-light">
+          <div class="card-img-top" style="height: 200px;" id="model-container-4"></div>
+          <div class="card-body">
+            <h5 class="card-title">Lamborghini Roadster</h5>
+            <p class="card-text">Diseñado para la libertad total, combina potencia extrema con una experiencia al aire libre.</p>
+            <button class="btn btn-outline-light w-100 mt-2">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 bg-dark text-light">
+          <div class="card-img-top" style="height: 200px;" id="model-container-5"></div>
+          <div class="card-body">
+            <h5 class="card-title">Lamborghini SC20</h5>
+            <p class="card-text">Una pieza única creada por Squadra Corse con aerodinámica de competición.</p>
+            <button class="btn btn-outline-light w-100 mt-2">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 bg-dark text-light">
+          <div class="card-img-top" style="height: 200px;" id="model-container-6"></div>
+          <div class="card-body">
+            <h5 class="card-title">Lamborghini GT3 EVO</h5>
+            <p class="card-text">Versión de carreras basada en el Huracán, lista para la pista con máximo rendimiento.</p>
+            <button class="btn btn-outline-light w-100 mt-2">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 bg-dark text-light">
+          <div class="card-img-top" style="height: 200px;" id="model-container-7"></div>
+          <div class="card-body">
+            <h5 class="card-title">Lanzador Concept</h5>
+            <p class="card-text">El futuro eléctrico de Lamborghini: diseño visionario y propulsión sin emisiones.</p>
+            <button class="btn btn-outline-light w-100 mt-2">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col">
+        <div class="card h-100 bg-dark text-light">
+          <div class="card-img-top" style="height: 200px;" id="model-container-8"></div>
+          <div class="card-body">
+            <h5 class="card-title">Lamborghini Urus</h5>
+            <p class="card-text">El SUV más veloz del mundo, fusiona lujo, utilidad y la esencia de un toro italiano.</p>
+            <button class="btn btn-outline-light w-100 mt-2">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>  
+
+  <!--Contacto-->
+  <section id="Contacto" class="contact-section">
+    <div class="contact-container">
+      <div class="contact-image">
+        <img src="./Imagenes/contacto.jpg" alt="Imagen de contacto" class="contact-img" />
+      </div>
+      <div class="contact-form-container">
+        <h2 class="contact-title">Contáctanos</h2>
+        <p class="contact-subtitle">¿Tienes preguntas? Estamos aquí para ayudarte.</p>
+        <form class="contact-form">
+          <input type="text" placeholder="Nombre" class="contact-input" />
+          <input type="email" placeholder="Correo electrónico" class="contact-input" />
+          <textarea placeholder="Tu mensaje" class="contact-textarea" rows="5"></textarea>
+          <button type="submit" class="contact-button">Enviar mensaje</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  
+  <!--Footer-->
+  <footer class="custom-footer">
+    <div class="footer-top">
+      <img src="./Imagenes/logo.png" alt="Logo Guini Style" class="footer-logo" />
+      <div class="social-icons">
+        <a href="#" class="social-link" aria-label="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="Facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" class="social-link" aria-label="Twitter">
+          <i class="fab fa-x-twitter"></i>
+        </a>
+      </div>
+    </div>
+    <p class="footer-copy">© 2025 Guini Style. Todos los derechos reservados.</p>
+  </footer>     
+
+  <!--Nav ABAJO-->
+  <nav class="navbar-abj">
+    <div class="sticky-footer">
+      <a href="#canvas-container" class="nav-link">INICIO</a>
+      <a href="#Cards" class="nav-link">MODELOS</a>
+      <a href="#Contacto" class="nav-link">CONTACTO</a>
+    </div>
+  </nav>
+
+  <!--Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
